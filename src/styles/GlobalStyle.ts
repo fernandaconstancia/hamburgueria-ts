@@ -14,6 +14,20 @@ export const GlobalStyle = createGlobalStyle`
       --sucess: #168821;
       --information: #155BCB;
     }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--grey-300) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--light) inset;
+    box-shadow: 0 0 0px 1000px var(--light) inset;
+    }
     
   * {
     margin: 0;
@@ -26,6 +40,17 @@ export const GlobalStyle = createGlobalStyle`
 
   html, body {
     background: var(--light);
+
+    &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 8px;
+            background-color: var(--light);
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: var(--color-primary);
+        }
   }
+
 
 `;

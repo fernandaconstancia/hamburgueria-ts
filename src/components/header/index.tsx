@@ -7,12 +7,16 @@ export const Header = () => {
     <S.Container>
       <img src={Logo} alt="Logo" />
       <div>
-        <div>
+        <S.Input>
           <input type="text" placeholder="Digitar Pesquisa" />
-          <FaSistrix />
-        </div>
-        <FaShoppingCart />
-        <FaSignOutAlt />
+          <S.Search>
+            <FaSistrix />
+          </S.Search>
+        </S.Input>
+        <S.Icons>
+          <FaShoppingCart />
+          <FaSignOutAlt />
+        </S.Icons>
       </div>
     </S.Container>
   );
